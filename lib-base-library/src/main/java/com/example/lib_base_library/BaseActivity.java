@@ -1,11 +1,12 @@
 package com.example.lib_base_library;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public  class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,9 +15,20 @@ public abstract class BaseActivity extends AppCompatActivity {
         initListener();
     }
 
-    public abstract void initView();
+    public void initView(){};
 
-    public abstract void initData();
+    public void initData(){};
 
-    public abstract void initListener();
+    public void initListener(){};
+
+
+    protected void showToast(int msgRes){
+        String msg = getResources().getString(msgRes);
+        showToast(msg);
+    }
+
+
+    protected void showToast(String msg){
+        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
+    }
 }
