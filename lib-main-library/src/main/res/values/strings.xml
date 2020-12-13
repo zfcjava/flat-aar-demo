@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">lib-main-library</string>
+    <string name="str_login">登录</string>
+</resources>
