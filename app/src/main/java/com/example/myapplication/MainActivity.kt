@@ -10,10 +10,7 @@ import com.example.lib_main_library.activity.MainLibActivity
 
 class MainActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+    override fun getLayoutId() = R.layout.activity_main
 
     fun toLogin(view: View) {
         checkUserInfo()
